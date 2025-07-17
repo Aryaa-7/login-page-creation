@@ -65,6 +65,8 @@ export const login = async (req, res) => {
             return res.status(401).json({ message: "Invalid credentials" });
         }
 
+        console.log("User logged in:", user);
+
         const token = jwt.sign(
             { userId: user._id, role: user.role },
             process.env.JWT_SECRET,
@@ -81,6 +83,7 @@ export const login = async (req, res) => {
             token,
         });
     } catch (error) {
+        console.log("Error logging in:",error);
         res.status(500).json({ message: error.message });
     }
 };

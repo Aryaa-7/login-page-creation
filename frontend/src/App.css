@@ -137,3 +137,18 @@
 .signup-footer a:hover {
   text-decoration: underline;
 }
+
+.dashboard-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
